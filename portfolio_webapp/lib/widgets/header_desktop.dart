@@ -34,7 +34,7 @@ class DesktopHeader extends StatelessWidget {
                       navitems[i],
                       style: TextStyle(
                           color: CustomColors.white90,
-                          fontSize: 15.0,
+                          fontSize: 16.0,
                           fontWeight: FontWeight.w400),
                     ),
                   ),
