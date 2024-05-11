@@ -4,3 +4,4 @@ const double kaboutmeDesktopwidth1 = 1300.0;
 const double kaboutmeDesktopwidth2 = 1100.0;
 const double kaboutmeDesktopwidth3 = 1000.0;
 const double kaboutmemobilewidth = 920;
+const double kskillsmedwidth = 1000.0;

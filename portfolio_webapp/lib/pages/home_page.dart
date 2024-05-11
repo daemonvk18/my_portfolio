@@ -8,6 +8,8 @@ import 'package:portfolio_webapp/widgets/header_drawer.dart';
 import 'package:portfolio_webapp/widgets/header_mobile.dart';
 import 'package:portfolio_webapp/widgets/main_desktop.dart';
 import 'package:portfolio_webapp/widgets/main_mobile.dart';
+import 'package:portfolio_webapp/widgets/skills_desktop.dart';
+import 'package:portfolio_webapp/widgets/skills_mobile.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -59,24 +61,47 @@ class _HomePageState extends State<HomePage> {
                 AboutMeMobile(),
 
               //SKILLS
-              Container(
-                color: CustomColors.black88,
-                height: 600.0,
-                width: double.maxFinite,
-              ),
-
-              //WORK EXPERIENCE
-              Container(
-                color: CustomColors.black80,
-                height: 600.0,
-                width: double.maxFinite,
-              ),
+              if (constraints.maxWidth >= kskillsmedwidth)
+                SkillsDesktop()
+              else
+                SkillsMobile(),
 
               //MY PROJECTS
               Container(
-                color: Color(0xFF333333),
-                height: 600.0,
-                width: double.maxFinite,
+                padding: const EdgeInsets.only(
+                    left: 40.0, right: 40.0, top: 20.0, bottom: 40.0),
+                color: CustomColors.black80,
+                width: screenWidth,
+                child: Column(
+                  children: [
+                    //my work heading
+                    const SizedBox(
+                      height: 10.0,
+                    ),
+                    //heading skills
+                    Text(
+                      "Projects",
+                      style: TextStyle(
+                          fontSize: 30.0,
+                          color: CustomColors.white90,
+                          fontWeight: FontWeight.w700),
+                    ),
+                    const SizedBox(
+                      height: 10.0,
+                    ),
+                    //small red coloured bar
+                    Container(
+                      height: 4.0,
+                      width: 50.0,
+                      decoration: BoxDecoration(
+                          color: CustomColors.red,
+                          borderRadius: BorderRadius.circular(20)),
+                    ),
+                    const SizedBox(
+                      height: 50.0,
+                    ),
+                  ],
+                ),
               ),
 
               //CONTACT
