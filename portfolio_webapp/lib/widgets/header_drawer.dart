@@ -3,7 +3,8 @@ import 'package:portfolio_webapp/constants/colors.dart';
 import 'package:portfolio_webapp/constants/nav_items.dart';
 
 class HeaderDrawer extends StatelessWidget {
-  const HeaderDrawer({super.key});
+  const HeaderDrawer({super.key, required this.onnavitemTap});
+  final Function(int) onnavitemTap;
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +30,9 @@ class HeaderDrawer extends StatelessWidget {
           for (int i = 0; i < navicons.length; i++)
             ListTile(
               contentPadding: EdgeInsets.symmetric(horizontal: 30.0),
-              onTap: () {},
+              onTap: () {
+                onnavitemTap(i);
+              },
               leading: Icon(
                 navicons[i],
                 color: CustomColors.white90,

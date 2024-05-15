@@ -1,11 +1,19 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:portfolio_webapp/constants/colors.dart';
 import 'package:portfolio_webapp/utils/contactutils.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:http/http.dart' as http;
 
-class Contact extends StatelessWidget {
+class Contact extends StatefulWidget {
   const Contact({super.key});
 
+  @override
+  State<Contact> createState() => _ContactState();
+}
+
+class _ContactState extends State<Contact> {
   @override
   Widget build(BuildContext context) {
     final screensize = MediaQuery.of(context).size;
@@ -13,9 +21,32 @@ class Contact extends StatelessWidget {
     final screenWidth = screensize.width;
     // ignore: unused_local_variable
     final screenheight = screensize.height;
-    final namecontroller = TextEditingController();
-    final emailcontroller = TextEditingController();
-    final messagecontroller = TextEditingController();
+    final TextEditingController namecontroller = TextEditingController();
+    final TextEditingController emailcontroller = TextEditingController();
+    final TextEditingController messagecontroller = TextEditingController();
+
+    Future<void> sendEmail() async {
+      final service_id = "service_ct7ftar";
+      final template_id = "template_s5mhnpf";
+      final user_id = "eXMs_nCJoIoZna2LZ";
+      final body = {
+        "service_id": service_id,
+        "template_id": template_id,
+        "user_id": user_id,
+        "template_params": {
+          'user_name': namecontroller.text,
+          "user_email": emailcontroller.text,
+          "user_message": messagecontroller.text
+        }
+      };
+
+      final url = 'https://api.emailjs.com/api/v1.0/email/send';
+      final response = await http.post(Uri.parse(url),
+          headers: {"Content-Type": "application/json"},
+          body: jsonEncode(body));
+      print(response.body);
+    }
+
     return Container(
       padding: const EdgeInsets.fromLTRB(20, 20, 20, 60),
       width: screenWidth,
@@ -71,6 +102,7 @@ class Contact extends StatelessWidget {
                         height: 20.0,
                       ),
                       //your name and your email textfields
+
                       Row(
                         children: [
                           //your name textfield
@@ -139,7 +171,7 @@ class Contact extends StatelessWidget {
                         child: TextField(
                           controller: messagecontroller,
                           style: TextStyle(color: CustomColors.black80),
-                          maxLines: null,
+                          maxLines: 30,
                           decoration: InputDecoration(
                             enabledBorder: OutlineInputBorder(
                                 borderSide: BorderSide.none,
@@ -157,20 +189,23 @@ class Contact extends StatelessWidget {
                       const SizedBox(
                         height: 20,
                       ),
-                      Container(
-                        alignment: Alignment.center,
-                        width: double.infinity,
-                        padding: const EdgeInsets.symmetric(vertical: 15.0),
-                        height: 50.0,
-                        decoration: BoxDecoration(
-                            color: CustomColors.red,
-                            borderRadius: BorderRadius.circular(25)),
-                        child: Text(
-                          "Get in touch",
-                          style: TextStyle(
-                              color: CustomColors.white90,
-                              fontSize: 15,
-                              fontWeight: FontWeight.w600),
+                      GestureDetector(
+                        onTap: sendEmail,
+                        child: Container(
+                          alignment: Alignment.center,
+                          width: double.infinity,
+                          padding: const EdgeInsets.symmetric(vertical: 15.0),
+                          height: 50.0,
+                          decoration: BoxDecoration(
+                              color: CustomColors.red,
+                              borderRadius: BorderRadius.circular(25)),
+                          child: Text(
+                            "Get in touch",
+                            style: TextStyle(
+                                color: CustomColors.white90,
+                                fontSize: 15,
+                                fontWeight: FontWeight.w600),
+                          ),
                         ),
                       ),
                       //divider

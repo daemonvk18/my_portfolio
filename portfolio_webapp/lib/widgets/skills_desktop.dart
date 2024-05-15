@@ -3,7 +3,8 @@ import 'package:portfolio_webapp/constants/colors.dart';
 import 'package:portfolio_webapp/constants/skillitems.dart';
 
 class SkillsDesktop extends StatelessWidget {
-  const SkillsDesktop({super.key});
+  const SkillsDesktop({super.key, required this.keys});
+  final Key keys;
 
   @override
   Widget build(BuildContext context) {
@@ -13,6 +14,7 @@ class SkillsDesktop extends StatelessWidget {
     // ignore: unused_local_variable
     final screenheight = screensize.height;
     return Container(
+      key: keys,
       padding: const EdgeInsets.only(
           left: 40.0, right: 40.0, top: 20.0, bottom: 60.0),
       color: CustomColors.black80,

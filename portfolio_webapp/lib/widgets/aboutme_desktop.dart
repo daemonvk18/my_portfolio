@@ -4,7 +4,8 @@ import 'package:portfolio_webapp/constants/colors.dart';
 import 'package:portfolio_webapp/constants/responsive_size.dart';
 
 class AboutMeDesktop extends StatelessWidget {
-  const AboutMeDesktop({super.key});
+  const AboutMeDesktop({super.key, required this.keys});
+  final Key keys;
 
   @override
   Widget build(BuildContext context) {
@@ -12,6 +13,7 @@ class AboutMeDesktop extends StatelessWidget {
     final screenWidth = screensize.width;
     final screenheight = screensize.height;
     return Container(
+      key: keys,
       padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 20.0),
       color: CustomColors.black80,
       height: screenheight / 1.3,

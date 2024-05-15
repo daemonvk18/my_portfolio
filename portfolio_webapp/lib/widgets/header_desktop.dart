@@ -4,7 +4,8 @@ import 'package:portfolio_webapp/constants/nav_items.dart';
 import 'package:portfolio_webapp/widgets/site_logo.dart';
 
 class DesktopHeader extends StatelessWidget {
-  const DesktopHeader({super.key});
+  const DesktopHeader({super.key, required this.navindex});
+  final Function(int) navindex;
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +30,9 @@ class DesktopHeader extends StatelessWidget {
                 child: Padding(
                   padding: const EdgeInsets.only(right: 20.0),
                   child: TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      navindex(i);
+                    },
                     child: Text(
                       navitems[i],
                       style: TextStyle(

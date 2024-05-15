@@ -3,7 +3,8 @@ import 'package:portfolio_webapp/constants/aboutme.dart';
 import 'package:portfolio_webapp/constants/colors.dart';
 
 class AboutMeMobile extends StatelessWidget {
-  const AboutMeMobile({super.key});
+  const AboutMeMobile({super.key, required this.keys});
+  final Key keys;
 
   @override
   Widget build(BuildContext context) {
@@ -12,6 +13,7 @@ class AboutMeMobile extends StatelessWidget {
     final screenWidth = screensize.width;
     final screenheight = screensize.height;
     return Container(
+      key: keys,
       padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 20.0),
       height: screenheight,
       color: CustomColors.black80,
@@ -64,7 +66,7 @@ class AboutMeMobile extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                "Hi, I'm Pailla Navya Preetham Reddy, apre-final year student\nat IIIT Bhubaneswar.I'm passionate about technology and\nthrive in the dynamic environment of computer science and\nengineering. Beyond academics,I enjoy engaging in extracurricular\nactivities and collaborating with peers. I'm determined to\nmake meaningful contributions in the field of technology\nand beyond.",
+                "Hi, I'm Pailla Navya Preetham Reddy, a pre-final year student\nat IIIT Bhubaneswar.I'm passionate about technology and\nthrive in the dynamic environment of computer science and\nengineering. Beyond academics,I enjoy engaging in extracurricular\nactivities and collaborating with peers. I'm determined to\nmake meaningful contributions in the field of technology\nand beyond.",
                 style: TextStyle(fontSize: 14.0, color: CustomColors.white80),
               ),
               const SizedBox(

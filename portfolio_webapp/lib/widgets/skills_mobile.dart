@@ -1,10 +1,10 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:portfolio_webapp/constants/colors.dart';
 import 'package:portfolio_webapp/constants/skillitems.dart';
 
 class SkillsMobile extends StatelessWidget {
-  const SkillsMobile({super.key});
+  const SkillsMobile({super.key, required this.keys});
+  final Key keys;
 
   @override
   Widget build(BuildContext context) {
@@ -14,6 +14,7 @@ class SkillsMobile extends StatelessWidget {
     // ignore: unused_local_variable
     final screenheight = screensize.height;
     return Container(
+      key: keys,
       padding: const EdgeInsets.only(
           left: 40.0, top: 20.0, bottom: 40.0, right: 40.0),
       width: screenWidth,
