@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio_webapp/constants/colors.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class MainMobile extends StatelessWidget {
   const MainMobile({super.key});
@@ -81,7 +82,9 @@ class MainMobile extends StatelessWidget {
           SizedBox(
             height: 45.0,
             child: ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  downloadResume();
+                },
                 child: Text(
                   "Download Resume",
                   style: TextStyle(color: CustomColors.red),
@@ -90,5 +93,16 @@ class MainMobile extends StatelessWidget {
         ],
       ),
     );
+  }
+
+  void downloadResume() async {
+    const resumeUrl =
+        "https://drive.google.com/file/d/1NhZnwXGf_2HzYbN85H_H98sHsYOeZvQI/view?usp=drivesdk";
+    final Uri uri = Uri.parse(resumeUrl);
+    if (await canLaunchUrl(uri)) {
+      await launchUrl(uri);
+    } else {
+      throw 'Could not launch $uri';
+    }
   }
 }
