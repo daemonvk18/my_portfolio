@@ -4,33 +4,54 @@ This is a professional portfolio website showcasing your skills, projects, and e
 
 ## Demo
 
-[Live Demo](#) <!-- Add a link to your live demo if available -->
+[https://npportfolio.netlify.app](#) <!-- Add a link to your live demo if available -->
 
 ## Features
 
 - **Professional Design:** A visually appealing and user-friendly interface.
 - **Responsive:** Fully responsive layout for compatibility with various devices and screen sizes.
-- **Portfolio Showcase:** Highlight your projects, skills, experience, and contact information.
-- **Contact Form:** Allow visitors to reach out to you easily through a contact form.
-- **Social Media Integration:** Links to your social media profiles for networking and contact purposes.
+- **Portfolio Showcase:** About me,skills,projects,contact information.
+- **Contact Form:** a seperate section for contacting me through email,linkedin,twitter,github.
 
 ## Technologies Used
 
-- **Frontend:**
-  - HTML
-  - CSS (with frameworks like Bootstrap or Tailwind CSS)
-  - JavaScript (with frameworks like React.js or Vue.js)
-- **Backend:**
-  - [Specify backend technologies if applicable]
-- **Database:**
-  - [Specify database technologies if applicable]
+- **Languages:**
+  - Dart
+- **Framework:**
+  - Flutter
+- **RestApi's:**
+  - [https://www.emailjs.com/]
 - **Deployment:**
-  - [Specify hosting or deployment platform]
+  - [https://www.netlify.com/]
 
 ## Installation
 
 1. Clone the repository:
 
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/daemonvk18/my_portfolio.git
+
+2. Navigate to the project directory:
+
+   ```bash
+   cd portfolio_webapp
+
+3. Install dependencies:
+
+   ```bash
+   npm install
+
+4. Start the development server:
+
+   ```bash
+   npm start
+
+## Screenshots
+![Screenshot 2024-05-16 194834](https://github.com/daemonvk18/my_portfolio/assets/120740623/207a7ad6-ba20-4adf-9bb1-f6b3d3edeb60)
+
+
+
+  
+
+
 
