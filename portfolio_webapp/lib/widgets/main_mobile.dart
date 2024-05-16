@@ -12,7 +12,7 @@ class MainMobile extends StatelessWidget {
     final screenheight = screensize.height;
     return Container(
       margin: EdgeInsets.symmetric(vertical: 30.0, horizontal: 30.0),
-      height: screenheight,
+      height: screenheight / 1.3,
       constraints: BoxConstraints(minHeight: 540.0),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -28,12 +28,12 @@ class MainMobile extends StatelessWidget {
             blendMode: BlendMode.srcATop,
             child: Image.asset(
               "Assets/homepage_image.png",
-              height: screenheight / 2,
+              height: screenheight / 2.8,
               width: screenWidth,
             ),
           ),
           const SizedBox(
-            height: 30.0,
+            height: 60.0,
           ),
 
           //intro text
@@ -80,15 +80,23 @@ class MainMobile extends StatelessWidget {
             height: 15.0,
           ),
           SizedBox(
-            height: 45.0,
-            child: ElevatedButton(
-                onPressed: () {
-                  downloadResume();
-                },
+            child: GestureDetector(
+              onTap: downloadResume,
+              child: Container(
+                padding: const EdgeInsets.symmetric(
+                    vertical: 10.0, horizontal: 40.0),
+                decoration: BoxDecoration(
+                    color: CustomColors.red,
+                    borderRadius: BorderRadius.circular(22)),
                 child: Text(
-                  "Download Resume",
-                  style: TextStyle(color: CustomColors.red),
-                )),
+                  "Resume",
+                  style: TextStyle(
+                      color: CustomColors.white90,
+                      fontSize: 18.0,
+                      fontWeight: FontWeight.w500),
+                ),
+              ),
+            ),
           )
         ],
       ),

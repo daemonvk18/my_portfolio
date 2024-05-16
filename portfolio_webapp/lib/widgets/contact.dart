@@ -162,7 +162,7 @@ class _ContactState extends State<Contact> {
                       ),
                       //your message box
                       Container(
-                        padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                        padding: const EdgeInsets.symmetric(horizontal: 10.0),
                         height: 300,
                         decoration: BoxDecoration(
                           color: CustomColors.white80,

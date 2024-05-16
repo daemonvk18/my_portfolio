@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:portfolio_webapp/constants/colors.dart';
@@ -21,7 +22,7 @@ class ProjectCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(children: [
+    return Column(children: [
       Container(
         height: 400.0,
         width: 300.0,
@@ -33,14 +34,17 @@ class ProjectCard extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             //project cover photo
-            Container(
-              width: double.maxFinite,
-              height: 160.0,
-              decoration: BoxDecoration(
-                  image: DecorationImage(
-                      image: AssetImage(projectuitils.imageurl)),
-                  color: CustomColors.white80,
-                  borderRadius: BorderRadius.circular(5)),
+            GestureDetector(
+              onTap: openURL,
+              child: Container(
+                width: double.maxFinite,
+                height: 160.0,
+                decoration: BoxDecoration(
+                    image: DecorationImage(
+                        image: AssetImage(projectuitils.imageurl)),
+                    color: CustomColors.white80,
+                    borderRadius: BorderRadius.circular(5)),
+              ),
             ),
             const SizedBox(
               height: 10.0,
@@ -126,22 +130,6 @@ class ProjectCard extends StatelessWidget {
           ],
         ),
       ),
-      GestureDetector(
-        onTap: openURL,
-        child: Padding(
-          padding: const EdgeInsets.only(left: 240, right: 30.0, top: 18.0),
-          child: Container(
-            height: 30.0,
-            width: 30.0,
-            decoration: BoxDecoration(
-                color: CustomColors.black88,
-                shape: BoxShape.circle,
-                image: DecorationImage(
-                    image: AssetImage(projectuitils.githubimageurl),
-                    fit: BoxFit.contain)),
-          ),
-        ),
-      )
     ]);
   }
 }

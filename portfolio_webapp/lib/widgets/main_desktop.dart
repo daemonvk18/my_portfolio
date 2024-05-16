@@ -13,7 +13,7 @@ class MainDesktop extends StatelessWidget {
     final screenheight = screensize.height;
     return Container(
       margin: EdgeInsets.only(left: 40.0, right: 20.0),
-      height: screenheight / 1.2,
+      height: screenheight,
       //this is for when the height of the screen is being reduced
       constraints: BoxConstraints(minHeight: 350.0),
       child: Row(
@@ -22,9 +22,11 @@ class MainDesktop extends StatelessWidget {
         children: [
           //some hi my name text
           Column(
-            mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              const SizedBox(
+                height: 200.0,
+              ),
               Row(
                 children: [
                   Text(
@@ -67,16 +69,23 @@ class MainDesktop extends StatelessWidget {
               ),
               //download resume button
               SizedBox(
-                height: 45.0,
-                child: ElevatedButton(
-                    onPressed: () {
-                      downloadResume();
-                    },
-                    child: Text(
-                      "Download Resume",
-                      style: TextStyle(color: CustomColors.red),
-                    )),
-              )
+                  child: GestureDetector(
+                onTap: downloadResume,
+                child: Container(
+                  padding: const EdgeInsets.symmetric(
+                      vertical: 10.0, horizontal: 40.0),
+                  decoration: BoxDecoration(
+                      color: CustomColors.red,
+                      borderRadius: BorderRadius.circular(22)),
+                  child: Text(
+                    "Resume",
+                    style: TextStyle(
+                        color: CustomColors.white90,
+                        fontSize: 18.0,
+                        fontWeight: FontWeight.w500),
+                  ),
+                ),
+              ))
             ],
           ),
           Image.asset(

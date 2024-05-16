@@ -12,7 +12,7 @@ class Footer extends StatelessWidget {
       color: CustomColors.black88,
       width: double.maxFinite,
       child: const Text(
-        "Made by Preetham with Flutter 3.16",
+        "Made by Preetham with Flutter 3.19.6",
         style: TextStyle(color: CustomColors.white80),
       ),
     );
