@@ -29,7 +29,7 @@ class MainMobile extends StatelessWidget {
             child: Image.asset(
               "Assets/homepage_image.png",
               height: screenheight / 2.8,
-              width: screenWidth,
+              width: screenWidth / 1.2,
             ),
           ),
           const SizedBox(
