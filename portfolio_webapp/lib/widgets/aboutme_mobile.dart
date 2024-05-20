@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:portfolio_webapp/constants/aboutme.dart';
 import 'package:portfolio_webapp/constants/colors.dart';
 
@@ -72,11 +73,11 @@ class AboutMeMobile extends StatelessWidget {
                     padding: const EdgeInsets.symmetric(
                         horizontal: 0.0, vertical: 20.0),
                     child: Text(
-                      softWrap: true,
-                      "Hi, I'm Pailla Navya Preetham Reddy, a pre-final year student at IIIT Bhubaneswar.I'm passionate about technology and thrive in the dynamic environment of computer science and engineering. Beyond academics,I enjoy engaging in extracurricular activities and collaborating with peers. I'm determined to make meaningful contributions in the field of technology and beyond.",
-                      style:
-                          TextStyle(fontSize: 14, color: CustomColors.white80),
-                    ),
+                        softWrap: true,
+                        "Hi, I'm Pailla Navya Preetham Reddy, a pre-final year student at IIIT Bhubaneswar.I'm passionate about technology and thrive in the dynamic environment of computer science and engineering. Beyond academics,I enjoy engaging in extracurricular activities and collaborating with peers. I'm determined to make meaningful contributions in the field of technology and beyond.",
+                        style: GoogleFonts.raleway(
+                            textStyle: TextStyle(
+                                fontSize: 14.0, color: CustomColors.white80))),
                   ),
                 ],
               ),
@@ -91,18 +92,18 @@ class AboutMeMobile extends StatelessWidget {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
-                        Text(
-                          aboutmetitle[i] + ":",
-                          style: TextStyle(
-                              color: CustomColors.white90,
-                              fontWeight: FontWeight.w600,
-                              fontSize: 14),
-                        ),
-                        Text(
-                          "  " + aboutmeans[i],
-                          style: TextStyle(
-                              color: CustomColors.white80, fontSize: 14),
-                        )
+                        Text(aboutmetitle[i] + ":",
+                            style: GoogleFonts.raleway(
+                                textStyle: TextStyle(
+                                    fontSize: 14.0,
+                                    fontWeight: FontWeight.w600,
+                                    color: CustomColors.white90))),
+                        Text("  " + aboutmeans[i],
+                            style: GoogleFonts.raleway(
+                                textStyle: TextStyle(
+                                    fontSize: 14.0,
+                                    fontWeight: FontWeight.w400,
+                                    color: CustomColors.white80)))
                       ],
                     ),
                   ]),

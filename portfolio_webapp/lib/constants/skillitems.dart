@@ -2,7 +2,7 @@ const List<Map> platformicons = [
   {"imagepath": "Assets/appdevlogo.png", "name": "App dev"},
   {"imagepath": "Assets/cvlogo.png", "name": "CV enthusiast"},
   {"imagepath": "Assets/mllogo.png", "name": "ML enthusiast"},
-  {"imagepath": "Assets/uilogo.png", "name": "UI designer"},
+  {"imagepath": "Assets/uilogo.png", "name": "UI Designer"},
 ];
 const List<Map> skillicons = [
   {"imagepath": "Assets/c++logo.png", "name": "C++"},

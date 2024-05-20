@@ -32,7 +32,9 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_screenutil: ^5.9.1
+  google_fonts: ^6.2.1
   http: ^1.2.1
+  loading_animation_widget: ^1.2.1
   url_launcher: ^6.2.6
 
 dev_dependencies:

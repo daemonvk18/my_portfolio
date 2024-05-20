@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:portfolio_webapp/constants/colors.dart';
 import 'package:portfolio_webapp/constants/skillitems.dart';
 
@@ -72,7 +73,14 @@ class SkillsDesktop extends StatelessWidget {
                               platformicons[i]["imagepath"].toString(),
                               width: 25.0,
                             ),
-                            title: Text(platformicons[i]["name"].toString()),
+                            title: Text(
+                              platformicons[i]["name"].toString(),
+                              style: GoogleFonts.openSans(
+                                  textStyle: TextStyle(
+                                      fontSize: 16.0,
+                                      fontWeight: FontWeight.w500,
+                                      color: CustomColors.white90)),
+                            ),
                           ),
                         )
                     ],
@@ -98,7 +106,14 @@ class SkillsDesktop extends StatelessWidget {
                         padding: const EdgeInsets.symmetric(
                             horizontal: 16.0, vertical: 12.0),
                         elevation: 0.0,
-                        label: Text(skillicons[i]['name']),
+                        label: Text(
+                          skillicons[i]['name'],
+                          style: GoogleFonts.openSans(
+                              textStyle: TextStyle(
+                                  fontSize: 15.0,
+                                  fontWeight: FontWeight.w500,
+                                  color: CustomColors.white90)),
+                        ),
                         avatar: Image.asset(skillicons[i]["imagepath"]),
                       )
                   ],

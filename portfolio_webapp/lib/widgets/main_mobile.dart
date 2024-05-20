@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:portfolio_webapp/constants/colors.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -41,39 +42,41 @@ class MainMobile extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               //hi i'm preetham text
-              const Text(
+              Text(
                 "Hi, I'm",
-                style: TextStyle(
-                    height: 1.5,
-                    fontSize: 30.0,
-                    color: CustomColors.white90,
-                    fontWeight: FontWeight.bold),
+                style: GoogleFonts.notoSans(
+                    textStyle: TextStyle(
+                        height: 1.5,
+                        fontSize: 30.0,
+                        color: CustomColors.white90,
+                        fontWeight: FontWeight.bold)),
               ),
-              const Text(
+              Text(
                 " Preetham",
-                style: TextStyle(
-                    height: 1.5,
-                    fontSize: 30.0,
-                    fontWeight: FontWeight.bold,
-                    color: CustomColors.red),
+                style: GoogleFonts.notoSans(
+                    textStyle: TextStyle(
+                        height: 1.5,
+                        fontSize: 30.0,
+                        color: CustomColors.red,
+                        fontWeight: FontWeight.bold)),
               )
             ],
           ),
-          const Text(
-            "I develop Flutter Applications",
-            style: TextStyle(
-                height: 1.5,
-                fontSize: 18.0,
-                fontWeight: FontWeight.w500,
-                color: CustomColors.white90),
-          ),
-          const Text(
+          Text("I develop Flutter Applications",
+              style: GoogleFonts.inter(
+                  textStyle: TextStyle(
+                      height: 1.5,
+                      fontSize: 18.0,
+                      color: CustomColors.white90,
+                      fontWeight: FontWeight.w500))),
+          Text(
             "and User Interfaces",
-            style: TextStyle(
-                height: 1.5,
-                fontSize: 18.0,
-                fontWeight: FontWeight.w500,
-                color: CustomColors.white90),
+            style: GoogleFonts.inter(
+                textStyle: TextStyle(
+                    height: 1.5,
+                    fontSize: 18.0,
+                    color: CustomColors.white90,
+                    fontWeight: FontWeight.w500)),
           ),
           //download resume button
           const SizedBox(
@@ -105,7 +108,7 @@ class MainMobile extends StatelessWidget {
 
   void downloadResume() async {
     const resumeUrl =
-        "https://drive.google.com/file/d/1NhZnwXGf_2HzYbN85H_H98sHsYOeZvQI/view?usp=drivesdk";
+        "https://drive.google.com/file/d/1Spm-2ywjc62pJEJBK9kdoTZ-WlVpRbZs/view?usp=drivesdk";
     final Uri uri = Uri.parse(resumeUrl);
     if (await canLaunchUrl(uri)) {
       await launchUrl(uri);

@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:portfolio_webapp/constants/colors.dart';
 import 'package:portfolio_webapp/utils/contactutils.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -91,13 +92,12 @@ class _ContactState extends State<Contact> {
                   child: Column(
                     children: [
                       //get in touch text
-                      Text(
-                        "Get in touch",
-                        style: TextStyle(
-                            fontSize: 25.0,
-                            color: CustomColors.white90,
-                            fontWeight: FontWeight.w600),
-                      ),
+                      Text("Get in touch",
+                          style: GoogleFonts.montserrat(
+                              textStyle: TextStyle(
+                                  color: CustomColors.white90,
+                                  fontSize: 25.0,
+                                  fontWeight: FontWeight.w600))),
                       const SizedBox(
                         height: 20.0,
                       ),

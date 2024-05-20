@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:portfolio_webapp/constants/colors.dart';
 import 'package:portfolio_webapp/utils/projectutils.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -50,26 +51,24 @@ class ProjectCard extends StatelessWidget {
               height: 10.0,
             ),
             //project name
-            Text(
-              projectuitils.title,
-              style: TextStyle(
-                  color: CustomColors.red,
-                  fontSize: 15.0,
-                  fontWeight: FontWeight.w600),
-            ),
+            Text(projectuitils.title,
+                style: GoogleFonts.montserrat(
+                    textStyle: TextStyle(
+                        color: CustomColors.red,
+                        fontSize: 15.0,
+                        fontWeight: FontWeight.w700))),
 
             const SizedBox(
               height: 10.0,
             ),
 
             //project description
-            Text(
-              projectuitils.description,
-              style: TextStyle(
-                  fontSize: 14.0,
-                  color: CustomColors.white80,
-                  fontWeight: FontWeight.w600),
-            ),
+            Text(projectuitils.description,
+                style: GoogleFonts.lato(
+                    textStyle: TextStyle(
+                        color: CustomColors.white80,
+                        fontSize: 14.0,
+                        fontWeight: FontWeight.w500))),
             const Spacer(),
 
             //tech stack hastags
@@ -89,7 +88,9 @@ class ProjectCard extends StatelessWidget {
                     height: 30.0,
                     child: Text(
                       projectuitils.techstack1,
-                      style: TextStyle(fontSize: 12.0),
+                      style: GoogleFonts.lato(
+                          textStyle: TextStyle(
+                              color: CustomColors.white80, fontSize: 12.0)),
                     ),
                   ),
                 ),
@@ -105,7 +106,9 @@ class ProjectCard extends StatelessWidget {
                     height: 30.0,
                     child: Text(
                       projectuitils.techstack2,
-                      style: TextStyle(fontSize: 12.0),
+                      style: GoogleFonts.lato(
+                          textStyle: TextStyle(
+                              color: CustomColors.white80, fontSize: 12.0)),
                     ),
                   ),
                 ),
@@ -121,7 +124,9 @@ class ProjectCard extends StatelessWidget {
                     height: 30.0,
                     child: Text(
                       projectuitils.techstack3,
-                      style: TextStyle(fontSize: 12.0),
+                      style: GoogleFonts.lato(
+                          textStyle: TextStyle(
+                              color: CustomColors.white80, fontSize: 12.0)),
                     ),
                   ),
                 ),

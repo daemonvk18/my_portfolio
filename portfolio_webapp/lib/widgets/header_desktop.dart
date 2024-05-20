@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:portfolio_webapp/constants/colors.dart';
 import 'package:portfolio_webapp/constants/nav_items.dart';
 import 'package:portfolio_webapp/widgets/site_logo.dart';
@@ -33,13 +34,13 @@ class DesktopHeader extends StatelessWidget {
                     onPressed: () {
                       navindex(i);
                     },
-                    child: Text(
-                      navitems[i],
-                      style: TextStyle(
-                          color: CustomColors.white90,
-                          fontSize: 16.0,
-                          fontWeight: FontWeight.w400),
-                    ),
+                    child: Text(navitems[i],
+                        style: GoogleFonts.inter(
+                            textStyle: TextStyle(
+                                height: 1.5,
+                                fontSize: 16.0,
+                                color: CustomColors.white90,
+                                fontWeight: FontWeight.w500))),
                   ),
                 ),
               )
