@@ -104,7 +104,7 @@ class MainDesktop extends StatelessWidget {
 
   void downloadResume() async {
     const resumeUrl =
-        "https://drive.google.com/file/d/1YkIbbknNcr8P7_ioj2C6WjYBjf2nZix7/view?usp=drivesdk";
+        "https://drive.google.com/file/d/1Spm-2ywjc62pJEJBK9kdoTZ-WlVpRbZs/view?usp=drivesdk";
     final Uri uri = Uri.parse(resumeUrl);
     if (await canLaunchUrl(uri)) {
       await launchUrl(uri);
