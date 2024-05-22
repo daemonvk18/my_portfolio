@@ -1,0 +1,10 @@
+^D:\FLUTTER DOCS\PORTFOLIO\PORTFOLIO_WEBAPP\BUILD\WINDOWS\X64\CMAKEFILES\DFE1A80106D52A73095357B235974FCA\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" "-SD:/flutter docs/portfolio/portfolio_webapp/windows" "-BD:/flutter docs/portfolio/portfolio_webapp/build/windows/x64" --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file "D:/flutter docs/portfolio/portfolio_webapp/build/windows/x64/portfolio_webapp.sln"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
