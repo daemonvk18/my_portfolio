@@ -4,7 +4,7 @@ This is a professional portfolio website showcasing your skills, projects, and e
 
 ## Demo
 
-[my_portfolio](my-portfolio-eight-pi-42.vercel.app) <!-- Add a link to your live demo if available -->
+[My Portfolio](https://my-portfolio-eight-pi-42.vercel.app) <!-- Add a link to your live demo if available -->
 
 ## Features
 
